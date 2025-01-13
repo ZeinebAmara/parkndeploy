@@ -4,9 +4,11 @@ env:
   AZURE_RG_NAME: ${{ vars.PROJECT_NAME }}-rg-${{ vars.AZURE_RESOURCE_IDENTIFIER }}
 permissions:
   id-token: write
+
 jobs:
   deploy_infrastructure:
     runs-on: ubuntu-latest
+    environment: production
 
     steps:
     - name: Checkout repository
